@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./components/sidebar/sidebar";
+import AppProviders from "@/Providers/appprovider";
+import Header from "./components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +18,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={
+          inter.className +
+          ` flex w-full bg-pallete-Light dark:bg-pallete-Darker`
+        }
+      >
+        <AppProviders>
+          <Sidebar />
+          <div className="w-full overflow-y-scroll no-scrollbar min-h-fit">
+            <Header />
+            {children}
+          </div>
+        </AppProviders>
+      </body>
     </html>
   );
 }
