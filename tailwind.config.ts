@@ -17,12 +17,6 @@ const config = {
         "2xl": "1400px",
       },
     },
-    colors: {
-      "pallete-Lighter": "#F3EEEA",
-      "pallete-Light": "#EBE3D5",
-      "pallete-Dark": "#B0A695",
-      "pallete-Darker": "#776B5D",
-    },
     extend: {
       keyframes: {
         "accordion-down": {
@@ -37,6 +31,15 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      colors: {
+        "pallete-Lighter": "#F3EEEA",
+        "pallete-Light": "#EBE3D5",
+        "pallete-Dark": "#B0A695",
+        "pallete-Darker": "#776B5D",
+      },
+      boxShadow: {
+        apple: '0px 4px 12px rgba(0, 0, 0, 0.1)',
       },
     },
   },
