@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { SidebarClose, SidebarOpen } from "lucide-react";
 import Link from "next/link";
+import { useSidebarContext } from "@/app/contexts/sideBarContext";
+import ProfileImage from '@/public/assets/perfil.jpg'
+import Image from "next/image";
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(true);
+  const { open, toggleSidebar } = useSidebarContext();
   const [activeUrl, setActiveUrl] = useState("/");
   const router = useRouter();
   const pathname = usePathname();
@@ -20,12 +23,9 @@ export default function Sidebar() {
         open ? `w-[20vw]` : `w-[10vw]`
       }`}
     >
-      <div className={`flex justify-end`}>
-        {open ? (
-          <SidebarOpen className="w-12 h-12" onClick={() => setOpen(!open)} />
-        ) : (
-          <SidebarClose className="w-10 h-10" onClick={() => setOpen(!open)} />
-        )}
+      <div className="flex w-full justify-center items-center p-4 flex-col gap-2">
+        <Image src={ProfileImage} className="w-full border-2 rounded-full max-w-[8rem] min-w-[2rem] max-h-[8rem] object-cover" alt=""></Image>
+        <span className={`text-xl ${open?'':'hidden'}`}><span className="dark:text-pallete-Darker font-semibold">Oi</span>, me chamo <span className="dark:text-pallete-Darker font-semibold">Thiago Carvalho</span>, é um prazer em ter <span className="dark:text-pallete-Darker font-semibold">você aqui!</span></span>
       </div>
       <nav className="flex flex-col gap-4">
         <Link

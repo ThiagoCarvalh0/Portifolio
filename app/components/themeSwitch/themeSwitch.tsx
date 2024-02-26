@@ -21,14 +21,15 @@ export default function ThemeSwitch() {
         alt="Loading Light/Dark Toggle"
         priority={false}
         title="Loading Light/Dark Toggle"
+        className="absolute top-0 right-0"
       />
     );
 
   if (resolvedTheme === "dark") {
-    return <SunMediumIcon onClick={() => setTheme("light")} />;
+    return <SunMediumIcon className="absolute stroke-pallete-Dark top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-Lighter rounded-full" onClick={() => setTheme("light")} />;
   }
 
   if (resolvedTheme === "light") {
-    return <MoonIcon onClick={() => setTheme("dark")} />;
+    return <MoonIcon className="absolute stroke-pallete-Lighter top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-Darker rounded-full" onClick={() => setTheme("dark")} />;
   }
 }
