@@ -19,22 +19,25 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`flex flex-col gap-4 px-2 bg-pallete-Lighter dark:bg-pallete-Dark transition-all min-h-screen max-h-fit ${
+      className={`flex flex-col gap-4 px-2 bg-pallete-light-secondary dark:bg-pallete-dark-secondary transition-all min-h-screen max-h-fit ${
         open ? `w-[20vw]` : `w-[10vw]`
       }`}
     >
       <div className="flex w-full justify-center items-center p-4 flex-col gap-2">
-        <Image src={ProfileImage} className="w-full border-2 rounded-full max-w-[8rem] min-w-[2rem] max-h-[8rem] object-cover" alt=""></Image>
-        <span className={`text-xl ${open?'':'hidden'}`}><span className="dark:text-pallete-Darker font-semibold">Oi</span>, me chamo <span className="dark:text-pallete-Darker font-semibold">Thiago Carvalho</span>, é um prazer em ter <span className="dark:text-pallete-Darker font-semibold">você aqui!</span></span>
+        <Image src={ProfileImage} className="w-full border-2 border-pallete-light-primary rounded-full max-w-[8rem] min-w-[2rem] max-h-[8rem] object-cover" alt=""></Image>
+        <span className={`text-xl text-pallete-light-primary ${open?'':'hidden'}`}>
+          <span className="dark:text-pallete-dark-accent text-pallete-light-primary font-semibold">Oi,</span> me chamo 
+          <span className="dark:text-pallete-dark-accent text-pallete-light-primary font-semibold"> Thiago Carvalho,</span> é um prazer em ter 
+          <span className="dark:text-pallete-dark-accent text-pallete-light-primary font-semibold"> você aqui!</span></span>
       </div>
       <nav className="flex flex-col gap-4">
         <Link
           href="/"
           className={`${
             activeUrl === "/"
-              ? `bg-pallete-Light dark:bg-pallete-Darker`
+              ? `bg-pallete-light-accent text-pallete-light-primary dark:bg-pallete-dark-primary`
               : `bg-inherit`
-          } rounded-md p-2 transition-all`}
+          } rounded-md p-2 transition-all text-pallete-light-primary`}
         >
           Home
         </Link>
@@ -42,9 +45,9 @@ export default function Sidebar() {
           href="/Tecnologias"
           className={`${
             activeUrl.startsWith("/Tecnologias")
-              ? `bg-pallete-Light dark:bg-pallete-Darker`
+              ? `bg-pallete-light-accent text-pallete-light-primary dark:bg-pallete-dark-primary`
               : `bg-inherit`
-          } rounded-md p-2 transition-all`}
+          } rounded-md p-2 transition-all text-pallete-light-primary`}
         >
           Tecnologias utilizadas
         </Link>
@@ -52,9 +55,9 @@ export default function Sidebar() {
           href="/Conquistas"
           className={`${
             activeUrl.startsWith("/Conquistas")
-              ? `bg-pallete-Light dark:bg-pallete-Darker`
+              ? `bg-pallete-light-accent text-pallete-light-primary dark:bg-pallete-dark-primary`
               : `bg-inherit`
-          } rounded-md p-2 transition-all`}
+          } rounded-md p-2 transition-all text-pallete-light-primary`}
         >
           Conquistas
         </Link>
@@ -62,9 +65,9 @@ export default function Sidebar() {
           href="/Projetos"
           className={`${
             activeUrl.startsWith("/Projetos")
-              ? `bg-pallete-Light dark:bg-pallete-Darker`
+              ? `bg-pallete-light-accent text-pallete-light-primary dark:bg-pallete-dark-primary`
               : `bg-inherit`
-          } rounded-md p-2 transition-all`}
+          } rounded-md p-2 transition-all text-pallete-light-primary`}
         >
           Projetos
         </Link>
@@ -72,9 +75,9 @@ export default function Sidebar() {
           href="/Curriculo"
           className={`${
             activeUrl.startsWith("/Curriculo")
-              ? `bg-pallete-Light dark:bg-pallete-Darker`
+              ? `bg-pallete-light-accent text-pallete-light-primary dark:bg-pallete-dark-primary`
               : `bg-inherit`
-          } rounded-md p-2 transition-all`}
+          } rounded-md p-2 transition-all text-pallete-light-primary`}
         >
           Curriculos
         </Link>

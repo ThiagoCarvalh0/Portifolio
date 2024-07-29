@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          ` flex w-full bg-pallete-Light dark:bg-pallete-Darker`
+          ` flex w-full bg-pallete-light-primary dark:bg-pallete-dark-primary`
         }
       >
         <AppProviders>

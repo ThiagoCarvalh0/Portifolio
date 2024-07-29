@@ -26,10 +26,10 @@ export default function ThemeSwitch() {
     );
 
   if (resolvedTheme === "dark") {
-    return <SunMediumIcon className="absolute stroke-pallete-Dark top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-Lighter rounded-full" onClick={() => setTheme("light")} />;
+    return <SunMediumIcon className="absolute stroke-pallete-light-primary top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-light-secondary rounded-full" onClick={() => setTheme("light")} />;
   }
 
   if (resolvedTheme === "light") {
-    return <MoonIcon className="absolute stroke-pallete-Lighter top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-Darker rounded-full" onClick={() => setTheme("dark")} />;
+    return <MoonIcon className="absolute stroke-pallete-light-primary top-[-.5rem] right-[-.5rem] w-8 h-8 p-1 bg-pallete-light-secondary rounded-full" onClick={() => setTheme("dark")} />;
   }
 }

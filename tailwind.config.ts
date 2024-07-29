@@ -33,10 +33,12 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       colors: {
-        "pallete-Lighter": "#F3EEEA",
-        "pallete-Light": "#EBE3D5",
-        "pallete-Dark": "#B0A695",
-        "pallete-Darker": "#776B5D",
+        "pallete-light-primary": "#ebf2fa",
+        "pallete-light-secondary": "#427aa1",
+        "pallete-light-accent": "#064789",
+        "pallete-dark-primary": "#064789",
+        "pallete-dark-secondary": "#427aa1",
+        "pallete-dark-accent": "#ebf2fa",
       },
       boxShadow: {
         apple: '0px 4px 12px rgba(0, 0, 0, 0.1)',
